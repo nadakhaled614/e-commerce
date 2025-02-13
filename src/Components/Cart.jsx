@@ -3,9 +3,8 @@ import useQueryCart from '../Hooks/useQueryCart'
 import { clearCartApi, deleteCartApi, getCartApi, updateCartApi } from '../APIS/cartApi'
 import Loading from './Loading'
 import useMuationCart from '../Hooks/useMuationCart'
-// import cartImage from '../assets/11329060.png'
+import cartImage from '../assets/11329060.png'
 import BasicModal from './BasicModal'
-import clearcartt from"../assets/finalProject assets/error.svg"
 
 export default function Cart() {
 
@@ -22,7 +21,7 @@ export default function Cart() {
 
 
   if (isError)
-  <Link to={'/'}><img src={clearcartt} width={130} alt="" /></Link>
+    return <img className='m-auto' src={cartImage} alt="" />
     
 
 
@@ -95,7 +94,7 @@ export default function Cart() {
           </tbody>
         </table>
         </div>
-      </div> : <img className='m-auto' src={clearcartt}/>}
+      </div> : <img className='m-auto' src={cartImage}/>}
 
 <BasicModal cartId={data?.data?._id}/>
 
